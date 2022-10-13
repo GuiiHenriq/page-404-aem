@@ -1,6 +1,7 @@
 import AppPage from './components/Page/AppPage'
 import Header from './components/Header/Header'
 import Content from './components/Content/Content'
+import Footer from './components/Footer/Footer'
 import {
   withComponentMappingContext,
   AllowedComponentsContainer,
@@ -34,3 +35,6 @@ MapTo('vue/components/header')(Header, EditConfig)
 
 // Content MapTo
 MapTo('vue/components/content')(Content, EditConfig)
+
+// Footer MapTo
+MapTo('vue/components/footer')(Footer, EditConfig)
