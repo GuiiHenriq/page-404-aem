@@ -1,4 +1,5 @@
 import AppPage from './components/Page/AppPage'
+import Header from './components/Header/Header'
 import {
   withComponentMappingContext,
   AllowedComponentsContainer,
@@ -6,6 +7,14 @@ import {
 } from '@mavice/aem-vue-editable-components'
 
 MapTo('vue/components/page')(withComponentMappingContext(AppPage))
+
+const EditConfig = {
+  emptyLabel: 'Empty',
+
+  isEmpty: function (props) {
+    return !props
+  }
+}
 
 // Container MapTo
 MapTo('vue/components/container')(
@@ -18,3 +27,6 @@ MapTo('vue/components/container')(
     }
   }
 )
+
+// Header MapTo
+MapTo('vue/components/header')(Header, EditConfig)
