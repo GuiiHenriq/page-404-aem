@@ -1,7 +1,8 @@
 <template>
   <footer>
     <p>
-      created by <a :href="linkUser" target="_blank">{{ username }}</a> - devChallenges.io
+      created by <a :href="linkUser" target="_blank">{{ username }}</a> -
+      devChallenges.io
     </p>
   </footer>
 </template>
@@ -31,10 +32,14 @@ footer {
   p {
     color: #bdbdbd;
     font-family: 'Space Mono', monospace;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 20px;
     letter-spacing: -0.04em;
+
+    @media (min-width: 1025px) {
+      font-size: 16px;
+    }
   }
 
   a {

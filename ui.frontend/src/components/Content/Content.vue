@@ -46,8 +46,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    flex-direction: column;
+    padding: 0 24px;
     margin: 5% 0;
+
+    @media (min-width: 1025px) {
+      width: 100vw;
+      flex-direction: row;
+      padding: 0;
+    }
 
     #image {
       width: 50%;
@@ -57,7 +64,11 @@ body {
       align-items: center;
 
       img {
-        max-width: 35vw;
+        max-width: 80vw;
+
+        @media (min-width: 1025px) {
+          max-width: 35vw;
+        }
       }
     }
 
@@ -68,25 +79,35 @@ body {
       gap: 3vw;
 
       h1 {
-        max-width: 35vw;
         font-family: Space Mono;
-        font-size: 64px;
+        font-size: 48px;
         font-weight: 700;
-        line-height: 95px;
+        line-height: 71px;
         letter-spacing: -0.035em;
         text-align: left;
         margin: 0;
+
+        @media (min-width: 1025px) {
+          max-width: 35vw;
+          font-size: 64px;
+          line-height: 95px;
+        }
       }
 
       p {
-        max-width: 23vw;
         font-family: Space Mono;
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 400;
-        line-height: 36px;
+        line-height: 26.66px;
         letter-spacing: -0.035em;
         text-align: left;
         margin: 0;
+
+        @media (min-width: 1025px) {
+          max-width: 23vw;
+          font-size: 24px;
+          line-height: 36px;
+        }
       }
 
       button {
